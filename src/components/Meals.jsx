@@ -29,7 +29,11 @@ export default function Meals() {
   // }, []);
 
   if (isLoading) {
-    return <p>Fecthing meals...</p>;
+    return <p className="center">Fecthing meals...</p>;
+  }
+
+  if (error) {
+    return <Error title="Failed to fetch meals " message={error} />;
   }
 
   // if (!data) {
